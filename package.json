@@ -1,0 +1,46 @@
+{
+    "name": "performance-monitor",
+    "version": "1.0.0",
+    "description": "monitor the app's performance",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lessYFF/performance-monitor.git"
+    },
+    "keywords": [
+        "performance"
+    ],
+    "author": "Bruce yff",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lessYFF/performance-monitor/issues"
+    },
+    "homepage": "https://github.com/lessYFF/performance-monitor#readme",
+    "dependencies": {
+        "axios": "^0.18.0"
+    },
+    "devDependencies": {
+        "git-lints": "^1.0.8",
+        "puppeteer": "^1.14.0"
+    },
+    "lint-staged": {
+        "*.{js,json,ts,css,md,vue,react}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -e $GIT_PARAMS"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
